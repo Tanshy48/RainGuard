@@ -1,4 +1,4 @@
 package com.example.rainguardapp
 
-class kjneva {
+class LoginActivity {
 }
