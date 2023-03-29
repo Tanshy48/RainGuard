@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RainGuardApp</string>
+    <string name="Button1">Готово</string>
+    <string name="Text1">Виберіть область</string>
 </resources>
