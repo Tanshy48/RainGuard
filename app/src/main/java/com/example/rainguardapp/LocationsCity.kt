@@ -1,5 +1,9 @@
 package com.example.rainguardapp
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import java.io.File
 class LocationsCity:AppCompatActivity() {
@@ -32,6 +36,10 @@ class LocationsCity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.locations_city)
 
+    }
+    fun Back (view: View){
+        val intent = Intent(this@LocationsCity, LocationsOB::class.java)
+        startActivity(intent)
     }
 
 

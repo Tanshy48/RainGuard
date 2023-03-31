@@ -22,6 +22,7 @@ class LocationsOB:AppCompatActivity(){
         }
         fun Select (view:View){
             val intent = Intent(this@LocationsOB, LocationsCity::class.java)
+            intent.putExtra("ob", ob)
             startActivity(intent)
         }
 

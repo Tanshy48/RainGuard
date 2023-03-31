@@ -34,6 +34,14 @@
             android:layout_width="162dp"
             android:layout_height="112dp"
             android:text="@string/Button2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="164dp"
+            android:layout_height="93dp"
+            android:onClick="Back"
+            android:text="@string/Button3" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

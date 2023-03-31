@@ -4,4 +4,5 @@
     <string name="Button2">Готово</string>
     <string name="Text1">Виберіть область</string>
     <string name="Text2">Виберіть місто</string>
+    <string name="Button3">Назад</string>
 </resources>
