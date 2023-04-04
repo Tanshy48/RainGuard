@@ -39,6 +39,8 @@ class LocationsCity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         setContentView(com.example.rainguardapp.R.layout.locations_city)
         val spinner = findViewById<Spinner>(com.example.rainguardapp.R.id.spinner1)
         val value = intent.getStringExtra("key")
