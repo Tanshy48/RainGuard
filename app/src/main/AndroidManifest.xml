@@ -18,7 +18,7 @@
         android:theme="@style/Theme.RainGuardApp"
         tools:targetApi="31">
         <activity
-            android:name=".LocationsOB"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +27,10 @@
         </activity>
         <activity
             android:name=".LocationsCity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".LocationsOB"
             android:exported="true">
         </activity>
     </application>
