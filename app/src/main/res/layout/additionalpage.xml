@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050657">
+
+    <LinearLayout
+        android:layout_marginBottom="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1C2D4D"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="25px"
+            android:background="#D9D9D9"
+            android:onClick="chooseCity"
+            android:backgroundTint ="#D9D9D9"
+            android:text="Обрати інше місто"
+            android:textColor="#000" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="271dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="25px"
+            android:background="#D9D9D9"
+            android:backgroundTint="#D9D9D9"
+            android:onClick="reportProblem"
+            android:text="Сповістити про проблему"
+            android:textColor="#000" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="365px"
+            android:layout_marginHorizontal="50px"
+            android:layout_marginTop="900px"
+            android:background="#4E6573"
+            android:text="Дані взято з сайту https://www.meteo.gov.ua/ "
+            android:textColor="#000" />
+
+
+    </LinearLayout>
+=======
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+>>>>>>> origin/Banias
+</androidx.constraintlayout.widget.ConstraintLayout>
