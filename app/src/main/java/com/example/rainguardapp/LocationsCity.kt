@@ -1,47 +1,132 @@
 package com.example.rainguardapp
+
+import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
-import java.io.File
-class LocationsCity:AppCompatActivity() {
-    val citiesCrimea = arrayOf("Сімферополь", "Ялта", "Севастополь", "Алушта", "Феодосія", "Керч", "Євпаторія", "Джанкой", "Саки", "Красноперекопськ", "Армянськ", "Щолкіне", "Бахчисарай", "Щастя", "Новоозерне", "Старий Крим", "Інкерман")
-    val citiesVinnytsia = arrayOf("Вінниця", "Хмільник", "Могилів-Подільський", "Козятин", "Жмеринка", "Ладижин", "Гайсин", "Тульчин", "Немирів", "Крижопіль", "Бар", "Гнівань", "Іллінці", "Літин")
-    val citiesVolyn = arrayOf("Луцьк", "Ковель", "Нововолинськ", "Камінь-Каширський", "Володимир-Волинський", "Любомль", "Рожище", "Шацьк", "Ківерці", "Верхівцеве", "Красноград", "Маневичі", "Турійськ", "Іваничі")
-    val citiesDnipro = arrayOf("Дніпро", "Кривий Ріг", "Нікополь", "Павлоград", "Кам'янське", "Марганець", "Верхівцеве", "Дніпровськ", "Новомосковськ", "Жовті Води", "Перещепине", "П'ятихатки", "Синельникове", "Тернівка", "Апостолове", "Вільногірськ", "Дніпрорудне", "Іллічівськ")
-    val citiesDonetsk = arrayOf("Донецьк", "Макіївка", "Маріуполь", "Харцизьк", "Горлівка", "Краматорськ", "Слов'янськ", "Авдіївка", "Єнакієве", "Дебальцеве", "Торез", "Красноармійськ", "Константинівка", "Світлодарськ", "Дружківка", "Артемівськ", "Новогродівка", "Волноваха", "Селидове", "Торецьк", "Амвросіївка", "Вуглегірськ", "Харцизьк", "Іловайськ")
-    val citiesZhytomyr = arrayOf("Житомир", "Бердичів", "Коростень", "Новоград-Волинський", "Малин", "Овруч", "Хорошів", "Радомишль", "Чуднів", "Іршанськ", "Коростишів", "Народичі", "Емілчине", "Брусилів", "Червоноармійськ", "Пулини", "Романівка")
-    val citiesZakarpattia = arrayOf("Ужгород", "Мукачево", "Хуст", "Виноградів", "Свалява", "Тячів", "Перечин", "Рахів", "Іршава", "Солотвино", "Берегове", "Воловець", "Міжгір'я")
-    val citiesZaporizhzhia = arrayOf("Запоріжжя", "Мелітополь", "Бердянськ", "Енергодар", "Василівка", "Кам'янка-Дніпровська", "Токмак", "Оріхів", "Пологи", "Молочанськ", "Приморськ", "Розівка", "Білозір'є")
-    val citiesIvanoFrankivsk = arrayOf("Івано-Франківськ", "Калуш", "Коломия", "Богородчани", "Болехів", "Бурштин", "Галич", "Городенка", "Долина", "Косів", "Надвірна", "Рогатин", "Снятин", "Тисмениця", "Яремче")
-    val citiesKyiv = arrayOf("Київ", "Бровари", "Вишгород", "Боярка", "Буча", "Ірпінь", "Обухів", "Тараща", "Фастів", "Васильків", "Переяслав-Хмельницький", "Баришівка", "Бориспіль", "Володарка", "Гостомель", "Згурівка", "Макарів", "Миронівка", "Першотравенськ", "Ржищів", "Сквира", "Ставище", "Тетіїв", "Узин", "Яготин")
-    val citiesKirovohrad = arrayOf("Кропивницький", "Олександрія", "Світловодськ", "Знам'янка", "Долинська", "Новоукраїнка", "Новомиргород", "Гайворон", "Бобринець", "Мала Виска", "Олександрівка", "Помічна", "Синельникове", "Ульянове", "Єлизаветград")
-    val citiesLuhansk = arrayOf("Лисичанськ", "Луганськ", "Алчевськ", "Антрацит", "Біловодськ", "Білогірськ", "Кадіївка", "Краснодон", "Красний Луч", "Первомайськ", "Ровеньки", "Сєвєродонецьк", "Сорокине", "Старобільськ", "Суходільськ", "Щастя")
-    val citiesLviv = arrayOf("Львів", "Дрогобич", "Самбір", "Стрий", "Червоноград", "Жовква", "Борислав", "Новий Розділ", "Сокаль", "Трускавець", "Стебник", "Броди", "Перемишляни", "Турка", "Миколаїв", "Городок", "Хирів", "Рудки", "Сколе", "Яворів", "Перемишль")
-    val citiesMykolaiv = arrayOf("Миколаїв", "Первомайськ", "Нова Одеса", "Вознесенськ", "Южноукраїнськ", "Снігурівка", "Новий Буг", "Баштанка", "Очаків", "Березнегувате", "Криве Озеро", "Врадіївка", "Доманівка", "Казанка", "Миколаївка", "Нові Білозерки", "Олександрівка", "Ольшанка", "Славське", "Терезівка", "Чорноморськ")
-    val citiesOdessa = arrayOf("Одеса", "Ізмаїл", "Южне", "Миколаївка", "Рені", "Березівка", "Біляївка", "Вилкове", "Жовті Води", "Кілія", "Кодима", "Комінтернівське", "Котовськ", "Красні Окни", "Маяк", "Подільськ", "Роздільна", "Саврань", "Тарутине", "Татарбунари", "Фрунзівка", "Чорноморськ", "Балта", "Білгород-Дністровський", "Велика Михайлівка", "Іллічівськ", "Комінтернівське", "Красилів", "Любашівка", "Могилів-Подільський", "Розсошенці", "Теплодар", "Тячівка")
-    val citiesPoltava = arrayOf("Полтава", "Кременчук", "Миргород", "Гадяч", "Лубни", "Кобеляки", "Карлівка", "Глобине", "Нові Санжари", "Хорол", "Зіньків", "Пирятин", "Оржиця", "Великі Сорочинці", "Гребінка", "Лохвиця", "Решетилівка", "Котельва", "Комсомольськ", "Семенівка", "Градизьк", "Білики", "Машівка", "Нова Галещина", "Ворожба", "Заводське", "Козельщина", "Котельвщина", "Лисянка", "Мала Перещепина", "Миропіль", "Розсоша", "Чутове")
-    val citiesRivne = arrayOf("Рівне", "Дубно", "Сарни", "Кузнецовськ", "Костопіль", "Здолбунів", "Березне", "Остріг", "Гоща", "Вараш", "Світанок", "Червоноармійськ", "Бронне", "Зарічне", "Клесів", "Корець", "Млинів", "Поворинь", "Рокитне", "Рось", "Рубежне", "Турійськ", "Червона Калина", "Щорс")
-    val citiesSumy = arrayOf("Суми", "Конотоп", "Шостка", "Охтирка", "Ромни", "Глухів", "Лебедин", "Білопілля", "Краснопілля", "Буринь", "Тростянець", "Середина-Буда", "Путивль", "Хорол", "Гадяч", "Бежанці", "Велика Писарівка", "Богодухів", "Козача Лопань", "Недригайлів", "Недригайлів", "Орілька", "Петрівка", "Полтавка", "Роздільна", "Савинці", "Солоницівка", "Терещівка", "Тростянець", "Угроїди", "Фастівцеве", "Хирівка", "Чернухи")
-    val citiesTernopil = arrayOf("Тернопіль", "Чортків", "Кременець", "Бережани", "Збараж", "Теребовля", "Підволочиськ", "Ланівці", "Гусятин", "Борщів", "Заліщики", "Зборів", "Козова", "Копичинці", "Монастириська", "Подібці", "Скалат", "Чорнотисова", "Шумськ", "Зарваниця", "Великі Бірки", "Городенка", "Залізці", "Збараж", "Копичинці", "Кременець", "Кривче", "Ліщинці", "Монастириська", "Новосілки", "Почаїв", "Скалат", "Стебник", "Ступки", "Теребовля", "Товсте", "Тростянець", "Чорнотисова")
-    val citiesKharkiv = arrayOf("Харків", "Ізюм", "Лозова", "Чугуїв", "Первомайський", "Куп'янськ", "Дергачі", "Балаклія", "Вовчанськ", "Красноград", "Комсомольськ", "Мерефа", "Нововодолазький", "Південний", "Покотилівка", "Богодухів", "Борівський", "Валки", "Дворічна", "Зачепилівка", "Зміїв", "Коротич", "Краснокутськ", "Краснопавлівка", "Куп'янське", "Люботин", "Мала Данилівка", "Нова Водолага", "Первомайський", "Петровське", "Сахновщина", "Сіверськ", "Чугуївський", "Шевченківський")
-    val citiesKherson = arrayOf("Херсон", "Нова Каховка", "Каховка", "Скадовськ", "Цюрупинськ", "Берислав", "Генічеськ", "Гола Пристань", "Кам'янка-Дніпровська", "Каховський", "Нижньосірогозький", "Новотроїцьке", "Олешківський", "Скадовський", "Таврійськ", "Великоолександрівський", "Високопільський", "Великоолександрівський", "Голопристанський", "Каховський", "Нижньосірогозький", "Новотроїцький", "Олешківський", "Скадовський", "Таврійський")
-    val citiesCherkasy = arrayOf("Черкаси", "Умань", "Золотоноша", "Сміла", "Канів", "Корсунь-Шевченківський", "Жашків", "Кам'янка", "Тальне", "Шпола", "Катеринопіль", "Чигирин", "Звенигородка", "Ватутіне", "Крижопіль", "Канівський", "Монастирищенський", "Смілянський", "Уманський", "Христинівський", "Черкаський", "Катеринопільський", "Чигиринський", "Шполянський")
-    val citiesChernivtsi = arrayOf("Чернівці", "Новоселиця", "Сторожинець", "Кіцмань", "Вашківці", "Заставна", "Кельменці", "Сокиряни", "Путила", "Хотин", "Герца", "Сторожинецький", "Новоселицький", "Кельменецький", "Путильський", "Сокирянський", "Хотинський")
-    val citiesChernihiv = arrayOf("Чернігів", "Ніжин", "Прилуки", "Сновськ", "Ічня", "Мена", "Бахмач", "Новгород-Сіверський", "Козелець", "Седнів", "Корюківка", "Бобровиця", "Сосниця", "Ніжинський", "Прилуцький", "Ічнянський", "Менський", "Новгород-Сіверський район", "Сосницький")
 
+
+class LocationsCity:AppCompatActivity() {
+    lateinit var adapter: ArrayAdapter<CharSequence>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.locations_city)
+        supportActionBar?.hide()
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        setContentView(com.example.rainguardapp.R.layout.locations_city)
+        val spinner = findViewById<Spinner>(com.example.rainguardapp.R.id.spinner1)
+        val value = intent.getStringExtra("key")
+        when (value) {
+            "Автономна Республіка Крим" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesCrimea, R.layout.simple_spinner_item)
+            }
+            "Вінницька" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesVinnytsia, R.layout.simple_spinner_item)
+            }
+            "Волинська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesVolyn, R.layout.simple_spinner_item)
+            }
+            "Дніпропетровська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesDnipro, R.layout.simple_spinner_item)
+            }
+            "Донецька" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesDonetsk, R.layout.simple_spinner_item)
+            }
+            "Житомирська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesZhytomyr, R.layout.simple_spinner_item)
+            }
+            "Закарпатська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesZakarpattia, R.layout.simple_spinner_item)
+                }
+            "Запорізька" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesZaporizhzhia, R.layout.simple_spinner_item)
+            }
+            "Івано-Франківська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesIvanoFrankivsk, R.layout.simple_spinner_item)
+            }
+            "Київська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesKyiv, R.layout.simple_spinner_item)
+                }
+            "Кіровоградська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesKirovohrad, R.layout.simple_spinner_item)
+                }
+            "Луганська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesLuhansk, R.layout.simple_spinner_item)
+                }
+            "Львівська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesLviv, R.layout.simple_spinner_item)
+                }
+            "Миколаївська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesMykolaiv, R.layout.simple_spinner_item)
+                }
+            "Одеська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesOdessa, R.layout.simple_spinner_item)
+                }
+            "Полтавська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesPoltava, R.layout.simple_spinner_item)
+                }
+            "Рівненська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesRivne, R.layout.simple_spinner_item)
+                }
+            "Сумська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesSumy, R.layout.simple_spinner_item)
+                }
+            "Тернопільська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesTernopil, R.layout.simple_spinner_item)
+                }
+            "Харківська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesKharkiv, R.layout.simple_spinner_item)
+                }
+            "Херсонська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesKherson, R.layout.simple_spinner_item)
+                }
+            "Хмельницька" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesKhmelnytsk, R.layout.simple_spinner_item)
+                }
+            "Черкаська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesCherkasy, R.layout.simple_spinner_item)
+                }
+            "Чернівецька" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesChernivtsi, R.layout.simple_spinner_item)
+                }
+            "Чернігівська" -> {
+                adapter = ArrayAdapter.createFromResource(
+                    this, com.example.rainguardapp.R.array.citiesChernihiv, R.layout.simple_spinner_item)
+                }
+        }
+        adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
+        spinner.setAdapter(adapter)
+    }
+        fun Back(view: View) {
+            val intent = Intent(this@LocationsCity, LocationsOB::class.java)
+            startActivity(intent)
+        }
+
 
     }
-    fun Back (view: View){
-        val intent = Intent(this@LocationsCity, LocationsOB::class.java)
-        startActivity(intent)
-    }
-
-
-
-}
