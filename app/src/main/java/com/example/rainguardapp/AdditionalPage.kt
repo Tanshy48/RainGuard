@@ -1,35 +1,23 @@
 package com.example.rainguardapp
 
-<<<<<<< HEAD
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 
-class additionalpage : AppCompatActivity() {
-=======
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-
-class additionalpage: AppCompatActivity() {
->>>>>>> origin/Banias
+class AdditionalPage: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.additionalpage)
     }
-<<<<<<< HEAD
 fun chooseCity(view: View){
 
-    val chooseIntent = Intent(this,LocationsCity::class.java)
+    val chooseIntent = Intent(this,LocationsOB::class.java)
     startActivity(chooseIntent)
 }
     fun reportProblem(view: View){
-        val reportIntent = Intent (this, reportProblem::class.java)
+        val reportIntent = Intent (this, ReportProblem::class.java)
         startActivity(reportIntent)
      }
 
- }
-=======
-
 }
->>>>>>> origin/Banias
