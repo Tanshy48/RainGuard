@@ -26,8 +26,6 @@ class LoginActivity : AppCompatActivity() {
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     lateinit var locationRequest: LocationRequest
     val REQUEST_CODE = 101
-    lateinit var lat: TextView
-    lateinit var lon: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         progressBar.visibility = ProgressBar.VISIBLE
 
-        TimeUnit.SECONDS.sleep(5L)
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         getLocation()
 }
@@ -50,6 +48,7 @@ class LoginActivity : AppCompatActivity() {
                     val location = task.result
                     if (location == null)
                         getNewLocation()
+
 
                     val intent = Intent(this, MainActivity::class.java)
                     intent.putExtra("lat", location.latitude)
@@ -73,9 +72,9 @@ class LoginActivity : AppCompatActivity() {
     private fun getNewLocation() {
         locationRequest = LocationRequest()
         locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        locationRequest.interval = 0
-        locationRequest.fastestInterval = 0
-        locationRequest.numUpdates = 2
+        locationRequest.interval = 1
+        locationRequest.fastestInterval = 1
+        locationRequest.numUpdates = 1
 
         fusedLocationProviderClient!!.requestLocationUpdates(
             locationRequest, locationCallback, Looper.myLooper()
@@ -86,9 +85,6 @@ class LoginActivity : AppCompatActivity() {
 
     private val locationCallback = object : LocationCallback(){
         override fun onLocationResult(p0: LocationResult) {
-            var lastLocation = p0.lastLocation
-            lat.text = lastLocation?.latitude.toString()
-            lon.text = lastLocation?.longitude.toString()
         }
     }
 

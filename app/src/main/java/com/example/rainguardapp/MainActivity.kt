@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
 
         var latIntent = intent.getDoubleExtra("lat", 1.5)
         var lonIntent = intent.getDoubleExtra("lon", 1.5)
+
+
         Log.i("Test", latIntent.toString())
         Log.i("Test", lonIntent.toString())
 

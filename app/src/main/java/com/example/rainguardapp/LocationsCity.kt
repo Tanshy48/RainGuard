@@ -124,7 +124,7 @@ class LocationsCity:AppCompatActivity() {
         spinner.setAdapter(adapter)
     }
         fun Back(view: View) {
-            val intent = Intent(this@LocationsCity, LocationsOB::class.java)
+            val intent = Intent(this, LocationsOB::class.java)
             startActivity(intent)
         }
 
