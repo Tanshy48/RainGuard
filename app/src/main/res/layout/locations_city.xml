@@ -39,6 +39,7 @@
         android:layout_height="74dp"
         android:backgroundTint="@color/button"
         android:hapticFeedbackEnabled="false"
+        android:onClick="Start"
         android:text="@string/Button2"
         android:textColor="@color/black"
         app:cornerRadius="30px"

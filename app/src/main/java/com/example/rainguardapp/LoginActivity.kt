@@ -26,17 +26,13 @@ class LoginActivity : AppCompatActivity() {
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     lateinit var locationRequest: LocationRequest
     val REQUEST_CODE = 101
-    lateinit var lat: TextView
-    lateinit var lon: TextView
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         progressBar = findViewById(R.id.progressBar)
         progressBar.visibility = ProgressBar.VISIBLE
-
-        TimeUnit.SECONDS.sleep(5L)
+        val value = intent.getStringExtra("key1")
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         getLocation()
 }
@@ -87,8 +83,6 @@ class LoginActivity : AppCompatActivity() {
     private val locationCallback = object : LocationCallback(){
         override fun onLocationResult(p0: LocationResult) {
             var lastLocation = p0.lastLocation
-            lat.text = lastLocation?.latitude.toString()
-            lon.text = lastLocation?.longitude.toString()
         }
     }
 

@@ -127,6 +127,10 @@ class LocationsCity:AppCompatActivity() {
             val intent = Intent(this@LocationsCity, LocationsOB::class.java)
             startActivity(intent)
         }
+    fun Start(view: View){
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
 
 
     }
