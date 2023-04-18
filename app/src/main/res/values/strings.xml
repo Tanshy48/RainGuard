@@ -5,4 +5,16 @@
     <string name="Text1">Виберіть область</string>
     <string name="Text2">Виберіть місто</string>
     <string name="Button3">Назад</string>
+    <string name="Button8">C</string>
+    <string name="Button9">F</string>
+    <string name="Button10">км/год</string>
+    <string name="Button11">м/с</string>
+    <string name="Button12">English</string>
+    <string name="Button13">Українська</string>
+    <string name="Button14">Так</string>
+    <string name="Button15">Ні</string>
+    <string name="Text12">Одиниці виміру температури</string>
+    <string name="Text13">Одиниці виміру швидкості вітру</string>
+    <string name="Text14">Мова</string>
+    <string name="Text15">Ввмікнути сповіщення про надзвичайні ситуації</string>
 </resources>
