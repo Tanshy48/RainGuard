@@ -18,6 +18,7 @@ import android.widget.TextView
 import com.google.android.gms.location.*
 import java.util.concurrent.TimeUnit
 import android.location.Geocoder
+import android.view.View
 import java.util.Locale
 
 

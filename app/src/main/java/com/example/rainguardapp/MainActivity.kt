@@ -48,6 +48,13 @@ class MainActivity : AppCompatActivity() {
     companion object {
         const val key = "d78a400532d5206b8ee146c6946a2706"
     }
-
+    fun toSetting(view: View) {
+        val intent = Intent(this, Setting::class.java)
+        startActivity(intent)
+    }
+    fun toAdd(view: View) {
+        val intent = Intent(this, AdditionalPage::class.java)
+        startActivity(intent)
+    }
 
 }

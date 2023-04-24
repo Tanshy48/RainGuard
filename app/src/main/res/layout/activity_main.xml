@@ -22,6 +22,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
+                android:onClick="toAdd"
                 android:text="1" />
 
             <TextView
@@ -38,6 +39,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="5dp"
+                android:onClick="toSetting"
                 android:text="2" />
         </LinearLayout>
 

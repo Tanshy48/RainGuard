@@ -1,0 +1,24 @@
+
+    <resources>
+        <string name="app_name">RainGuardApp</string>
+        <string name="Button1">Next</string>
+        <string name="Button2">Ready</string>
+        <string name="Text1">Select an area</string>
+        <string name="Text2">Select а city</string>
+        <string name="Button3">Back</string>
+        <string name="Button8">C</string>
+        <string name="Button9">F</string>
+        <string name="Button10">km/h</string>
+        <string name="Button11">m/s</string>
+        <string name="Button12">English</string>
+        <string name="Button13">Українська</string>
+        <string name="Button14">Yes</string>
+        <string name="Button15">No</string>
+        <string name="Text12">Temperature measurement units</string>
+        <string name="Text13">Wind speed measurement units</string>
+        <string name="Text14">Language</string>
+        <string name="Text15">Enable emergency notifications</string>
+        <string name="Button16">Choose another city</string>
+        <string name="Button17">Report a problem</string>
+        <string name="Button18">The data is taken from the site https://www.meteo.gov.ua/ </string>
+    </resources>
