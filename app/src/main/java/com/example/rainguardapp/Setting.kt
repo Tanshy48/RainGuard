@@ -9,4 +9,5 @@ class Setting : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.example.rainguardapp.R.layout.setting)
     }
+
 }

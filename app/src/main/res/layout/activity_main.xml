@@ -74,7 +74,7 @@
                 android:id="@+id/textView7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Прогноз на 4 дні" />
+                android:text="Прогноз на 4 дня" />
 
             <LinearLayout
                 android:layout_width="match_parent"
