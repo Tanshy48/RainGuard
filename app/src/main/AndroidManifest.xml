@@ -37,6 +37,14 @@
             android:name=".MainActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".AdditionalPage"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".ReportProblem"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

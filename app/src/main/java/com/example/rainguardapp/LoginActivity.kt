@@ -26,8 +26,6 @@ class LoginActivity : AppCompatActivity() {
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     lateinit var locationRequest: LocationRequest
     val REQUEST_CODE = 101
-    lateinit var lat: TextView
-    lateinit var lon: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,10 +33,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         progressBar = findViewById(R.id.progressBar)
         progressBar.visibility = ProgressBar.VISIBLE
-        lat = findViewById(R.id.lat)
-        lon = findViewById(R.id.lon)
 
-        TimeUnit.SECONDS.sleep(5L)
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         getLocation()
 }
@@ -50,12 +46,15 @@ class LoginActivity : AppCompatActivity() {
 
                 fusedLocationProviderClient.lastLocation.addOnCompleteListener { task ->
                     val location = task.result
-                    if (location == null){
+                    if (location == null)
                         getNewLocation()
-                    } else {
-                        lat.text = location.latitude.toString()
-                        lon.text = location.longitude.toString()
-                    }
+
+
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.putExtra("lat", location.latitude)
+                    intent.putExtra("lon", location.longitude)
+                    startActivity(intent)
+
                 }
 
             } else {
@@ -73,40 +72,19 @@ class LoginActivity : AppCompatActivity() {
     private fun getNewLocation() {
         locationRequest = LocationRequest()
         locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        locationRequest.interval = 0
-        locationRequest.fastestInterval = 0
-        locationRequest.numUpdates = 2
+        locationRequest.interval = 1
+        locationRequest.fastestInterval = 1
+        locationRequest.numUpdates = 1
 
         fusedLocationProviderClient!!.requestLocationUpdates(
             locationRequest, locationCallback, Looper.myLooper()
         )
-
     }
 
-    private fun getCityName(lat: Double, lon: Double):String{
-        lateinit var cityName: String
-        val geocoder = Geocoder(this, Locale.getDefault())
-        val addresses =
-            geocoder.getFromLocation(lat, lon, 1)
-        cityName = addresses!!.get(0)!!.locality
 
-        return cityName
-    }
-    private fun getCountryCode(lat: Double, lon: Double):String{
-        lateinit var countryCode: String
-        val geocoder = Geocoder(this, Locale.getDefault())
-        val addresses =
-            geocoder.getFromLocation(lat, lon, 1)
-        countryCode = addresses!!.get(0)!!.countryCode
-
-        return countryCode
-    }
 
     private val locationCallback = object : LocationCallback(){
         override fun onLocationResult(p0: LocationResult) {
-            var lastLocation = p0.lastLocation
-            lat.text = lastLocation?.latitude.toString()
-            lon.text = lastLocation?.longitude.toString()
         }
     }
 
