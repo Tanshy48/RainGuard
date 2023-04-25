@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="regions">
+        <item>Avtonomna Respublika Krym</item>
+        <item>Volynsk</item>
+        <item>Dnipropetrovsk</item>
+        <item>Zhytomyrska</item>
+        <item>Zakarpattia</item>
+        <item>Zaporizhzhia</item>
+        <item>Ivano-Frankivsk</item>
+        <item>Kyivska</item>
+        <item>Kirovohradsk</item>
+        <item>Luhansk</item>
+        <item>Lviv</item>
+        <item>Mykolayivska</item>
+        <item>Odesa</item>
+        <item>Poltavska</item>
+        <item>Rivne</item>
+        <item>Sumy</item>
+        <item>Ternopilsk</item>
+        <item>Kharkivska</item>
+        <item>Khersonsk</item>
+        <item>Khmelnytska</item>
+        <item>Cherkassy</item>
+        <item>Chernivtsi</item>
+        <item>Chernihivska</item>
+    </string-array>
+</resources>
