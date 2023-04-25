@@ -23,7 +23,7 @@
             android:background="#D9D9D9"
             android:onClick="chooseCity"
             android:backgroundTint ="#D9D9D9"
-            android:text="Обрати інше місто"
+            android:text="@string/Button16"
             android:textColor="#000" />
 
         <Button
@@ -35,7 +35,7 @@
             android:background="#D9D9D9"
             android:backgroundTint="#D9D9D9"
             android:onClick="reportProblem"
-            android:text="Сповістити про проблему"
+            android:text="@string/Button17"
             android:textColor="#000" />
 
 
@@ -46,7 +46,7 @@
             android:layout_marginHorizontal="50px"
             android:layout_marginTop="900px"
             android:background="#4E6573"
-            android:text="Дані взято з сайту https://www.meteo.gov.ua/ "
+            android:text="@string/Button18"
             android:textColor="#000" />
 
 

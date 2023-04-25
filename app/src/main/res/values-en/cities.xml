@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="citiesCrimea">
+        <item>Simferopol</item>
+        <item>Yalta</item>
+        <item>Sevastopol</item>
+        <item>Alushta</item>
+        <item>Feodosiya</item>
+        <item>Kerch</item>
+        <item>Yevpatoriya</item>
+        <item>Dzhankoy</item>
+        <item>Saky</item>
+        <item>Krasnoperekopsk</item>
+        <item>Armiansk</item>
+        <item>Shcholkine</item>
+        <item>Bakhchisarai</item>
+        <item>Schastya</item>
+        <item>Novoozerne</item>
+        <item>Staryi Krym</item>
+        <item>Inkerman</item>
+    </string-array>
+    <string-array name="citiesVinnytsia">
+        <item>Vinnytsia</item>
+        <item>Khmelnytskyi</item>
+        <item>Mohyliv-Podilskyi</item>
+    <item>Kozyatyn</item>
+    <item>Zhmerynka</item>
+    <item>Ladyzhyn</item>
+    <item>Haisyn</item>
+    <item>Tulchyn</item>
+    <item>Nemyriv</item>
+    <item>Kryzhopil</item>
+    <item>Bar</item>
+    <item>Hnivan</item>
+    <item>Illiintsi</item>
+    <item>Lyutyn</item>
+    </string-array>
+    <string-array name="citiesVolyn">
+        <item>Lutsk</item>
+        <item>Kovel</item>
+        <item>Novovolynsk</item>
+        <item>Kamianka-Buzka</item>
+        <item>Volodymyr-Volynskyi</item>
+        <item>Liuboml</item>
+        <item>Rohatyn</item>
+        <item>Shatsk</item>
+        <item>Kivertsi</item>
+        <item>Verkhivtseve</item>
+        <item>Krasnohrad</item>
+        <item>Manevychi</item>
+        <item>Turka</item>
+        <item>Ivanychiv</item>
+    </string-array>
+    <string-array name="citiesDnipro">
+        <item>Dnipro</item>
+        <item>Kryvyi Rih</item>
+        <item>Nikopol</item>
+        <item>Pavlohrad</item>
+        <item>Kamianske</item>
+        <item>Marganets</item>
+        <item>Verkhniodniprovsk</item>
+        <item>Dniprovsk</item>
+        <item>Novomoskovsk</item>
+        <item>Zhovti Vody</item>
+        <item>Pereshchepyne</item>
+        <item>Piatykhatky</item>
+        <item>Synelnykove</item>
+        <item>Ternivka</item>
+        <item>Apostolove</item>
+        <item>Vilnohirsk</item>
+        <item>Dniprorudne</item>
+        <item>Illiechivsk</item>
+    </string-array>
+    <string-array name="citiesDonetsk">
+        <item>Donetsk</item>
+        <item>Makiivka</item>
+        <item>Mariupol</item>
+        <item>Khartsyzk</item>
+        <item>Horlivka</item>
+        <item>Kramatorsk</item>
+        <item>Sloviansk</item>
+        <item>Avdiivka</item>
+        <item>Yenakiieve</item>
+        <item>Debaltseve</item>
+        <item>Torez</item>
+        <item>Krasnoarmiisk</item>
+        <item>Kostiantynivka</item>
+        <item>Svitlodarsk</item>
+        <item>Druzhkivka</item>
+        <item>Artemivsk</item>
+        <item>Novohrodivka</item>
+        <item>Vuhlehirsk</item>
+        <item>Selydove</item>
+        <item>Toretsk</item>
+        <item>Amvrosiivka</item>
+        <item>Vuhlehirska</item>
+        <item>Ilovaisk</item>
+    </string-array>
+    <string-array name="citiesZhytomyr">
+        <item>Zhytomyr</item>
+        <item>Berdychiv</item>
+        <item>Korosten</item>
+        <item>Novohrad-Volynskyi</item>
+        <item>Malyn</item>
+        <item>Ovruch</item>
+        <item>Khoroshiv</item>
+        <item>Radomyshl</item>
+        <item>Chudniv</item>
+        <item>Irschans\'k</item>
+        <item>Korostyshiv</item>
+        <item>Narodychi</item>
+        <item>Emilchynе</item>
+        <item>Brusyliv</item>
+        <item>Chervonoarmiys\'k</item>
+        <item>Pulyyny</item>
+        <item>Romanivka</item>
+    </string-array>
+    <string-array name="citiesZakarpattia">
+        <item>Uzhhorod</item>
+        <item>Mukachevo</item>
+        <item>Khust</item>
+        <item>Vynohradiv</item>
+        <item>Svaliava</item>
+        <item>Tyachiv</item>
+        <item>Peremyshliany</item>
+        <item>Rakhiv</item>
+        <item>Irshava</item>
+        <item>Solotvyno</item>
+        <item>Berehove</item>
+        <item>Volovets</item>
+        <item>Mizhhiria</item>
+    </string-array>
+    <string-array name="citiesZaporizhzhia">
+        <item>Zaporizhzhya</item>
+        <item>Melitopol</item>
+        <item>Berdiansk</item>
+        <item>Enerhodar</item>
+        <item>Vasylivka</item>
+        <item>Kamianka-Dniprovska</item>
+        <item>Tokmak</item>
+        <item>Orikhiv</item>
+        <item>Polohy</item>
+        <item>Molochansk</item>
+        <item> Prymorsk</item>
+        <item>Rozivka</item>
+        <item>Biloziria</item>
+    </string-array>
+    <string-array name="citiesIvanoFrankivsk">
+        <item>Ivano-Frankivsk</item>
+        <item>Kalush</item>
+        <item>Kolomyia</item>
+        <item>Bogorodchany</item>
+        <item>Bolekhiv</item>
+        <item>Burshtyn</item>
+        <item>Halych</item>
+        <item>Horodenka</item>
+        <item>Dolyna</item>
+        <item>Kosiv</item>
+        <item>Nadvirna</item>
+        <item>Rohatyn</item>
+        <item>Sniatyn</item>
+        <item>Tysmenytsia</item>
+        <item>Yaremche</item>
+    </string-array>
+    <string-array name="citiesKyiv">
+        <item>Kyiv</item>
+        <item>Brovary</item>
+        <item>Vyshhorod</item>
+        <item>Boyarka</item>
+        <item>Bucha</item>
+        <item>Irpyn</item>
+        <item>Obukhiv</item>
+        <item>Tarashcha</item>
+        <item>Fastiv</item>
+        <item>Vasylkiv</item>
+        <item>Pereiaslav-Khmelnytskyi</item>
+        <item>Baryshivka</item>
+        <item>Boryspil</item>
+        <item>Volodarka</item>
+        <item>Hostomel</item>
+        <item>Zghurivka</item>
+        <item>Makariv</item>
+        <item>Myronivka</item>
+        <item>Pershotravensk</item>
+        <item>Rzhyshchiv</item>
+        <item>Skvyra</item>
+        <item>Stavyshche</item>
+        <item>Tetiiv</item>
+        <item>Uzyn</item>
+        <item>Yahotyn</item>
+    </string-array>
+    <string-array name="citiesKirovohrad">
+        <item>Kropyvnytskyi</item>
+        <item>Oleksandriia</item>
+        <item>Svitlovodsk</item>
+        <item>Znamianka</item>
+        <item>Dolynska</item>
+        <item>Novoukrainka</item>
+        <item>Novomyrhorod</item>
+        <item>Hayvoron</item>
+        <item>Bobrynets</item>
+        <item>Mala Vyska</item>
+        <item>Oleksandrivka</item>
+        <item>Pomichna</item>
+        <item>Synelnykove</item>
+        <item>Ulyanove</item>
+        <item>Yelyzavethrad</item>
+    </string-array>
+    <string-array name="citiesLuhansk">
+        <item>Lyssychansk</item>
+        <item>Luhansk</item>
+        <item>Alchevsk</item>
+        <item>Anthracite</item>
+        <item>Bilovods\'k</item>
+        <item>Bilogirsk</item>
+        <item>Kadiyivka</item>
+        <item>Krasnodon</item>
+        <item>Krasnyy Luch</item>
+        <item>Pervomays\'k</item>
+        <item>Rovenky</item>
+        <item>Severodonetsk</item>
+        <item>Sorokino</item>
+        <item>Starobil\'s\'k</item>
+        <item>Sukhodil\'s\'k</item>
+        <item>Schastya</item>
+    </string-array>
+    <string-array name="citiesLviv">
+        <item>Lviv</item>
+        <item>Drohobych</item>
+        <item>Sambir</item>
+        <item>Stryi</item>
+        <item>Chervonohrad</item>
+        <item>Zhovkva</item>
+        <item>Boryslav</item>
+        <item>Novyi Rozdil</item>
+        <item>Sokal</item>
+        <item>Truskavets</item>
+        <item>Stebnyk</item>
+        <item>Brody</item>
+        <item>Peremyshliany</item>
+        <item>Turka</item>
+        <item>Mykolaiv</item>
+        <item>Horodok</item>
+        <item>Khyriv</item>
+        <item>Rudky</item>
+        <item>Skole</item>
+        <item>Yavoriv</item>
+        <item>Przemyśl</item>
+    </string-array>
+    <string-array name="citiesMykolaiv">
+        <item>Mykolaiv</item>
+        <item>Pervomaisk</item>
+        <item>Nova Odesa</item>
+        <item>Voznesensk</item>
+        <item>Yuzhne</item>
+        <item>Sniatynka</item>
+        <item>Novyi Buh</item>
+        <item>Bashtanka</item>
+        <item>Ochakiv</item>
+        <item>Bereznehuvate</item>
+        <item>Kryve Ozero</item>
+        <item>Vradiivka</item>
+        <item>Domanivka</item>
+        <item>Kazanka</item>
+        <item>Mykolaivka</item>
+        <item>Novi Bilozirky</item>
+        <item>Oleksandrivka</item>
+        <item>Olshanka</item>
+        <item>Slavske</item>
+        <item>Terezivka</item>
+        <item>Chornomorsk</item>
+
+    </string-array>
+    <string-array name="citiesOdessa">
+        <item>Odesa</item>
+        <item>Izmail</item>
+        <item>Yuzhne</item>
+        <item>Mykolaivka</item>
+        <item>Reni</item>
+        <item>Berezivka</item>
+        <item>Biliayivka</item>
+        <item>Vylkove</item>
+        <item>Zhovti Vody</item>
+        <item>Kiliya</item>
+        <item>Kodyma</item>
+        <item>Kominternivske</item>
+        <item>Kotovsk</item>
+        <item>Krasni Okny</item>
+        <item>Mayak</item>
+        <item>Podilsk</item>
+        <item>Rozdilna</item>
+        <item>Savran</item>
+        <item>Tarutyne</item>
+        <item>Tatarbunary</item>
+        <item>Frunzivka</item>
+        <item>Chornomorsk</item>
+        <item>Balta</item>
+        <item>Bilhorod-Dnistrovskyi</item>
+        <item>Velyka Mykhailivka</item>
+        <item>Illiechiwsk</item>
+        <item>Kominternivske</item>
+        <item>Krasyliv</item>
+        <item>Liubashivka</item>
+        <item>Mohyliv-Podilskyi</item>
+        <item>Rozsoshentsi</item>
+        <item>TeploDar</item>
+        <item>Tiachivka</item>
+
+    </string-array>
+    <string-array name="citiesPoltava">
+        <item>Poltava</item>
+        <item>Kremenchuk</item>
+        <item>Myrhorod</item>
+        <item>Hadiach</item>
+        <item>Lubny</item>
+        <item>Kobeliaky</item>
+        <item>Karlivka</item>
+        <item>Hlobyne</item>
+        <item>Novi Sanzhary</item>
+        <item>Kharkiv</item>
+        <item>Zinkiv</item>
+        <item>Pyriatyn</item>
+        <item>Orzhiv</item>
+        <item>Velyki Sorochyntsi</item>
+        <item>Hrebinka</item>
+        <item>Lokhvytsia</item>
+        <item>Reshetylivka</item>
+        <item>Kotelva</item>
+        <item>Komsomolsk</item>
+        <item>Semenivka</item>
+        <item>Hadzhyz</item>
+        <item>Bilyky</item>
+        <item>Mashivka</item>
+        <item>Nova Haleshchyna</item>
+        <item>Vorozhba</item>
+        <item>Zavodske</item>
+        <item>Kozelshchyna</item>
+        <item>Kotelvshchyna</item>
+        <item>Lysianka</item>
+        <item>Mala Pereshchepyna</item>
+        <item>Myropil</item>
+        <item>Rozsosheni</item>
+        <item>Chutove</item>
+    </string-array>
+    <string-array name="citiesRivne">
+        <item>Rivne</item>
+        <item>Dubno</item>
+        <item>Sarny</item>
+        <item>Kuznetsovsk</item>
+        <item>Kostopil</item>
+        <item>Zdolbuniv</item>
+        <item>Berezhne</item>
+        <item>Ostrih</item>
+        <item>Hoshcha</item>
+        <item>Varash</item>
+        <item>Svitanok</item>
+        <item>Chervonoarmiysk</item>
+        <item>Bronne</item>
+        <item>Zarichne</item>
+        <item>Klesiv</item>
+        <item>Korets</item>
+        <item>Mlyniv</item>
+        <item>Povorin</item>
+        <item>Rokytne</item>
+        <item>Ros</item>
+        <item>Rubezhne</item>
+        <item>Turiysk</item>
+        <item>Chervona Kalyna</item>
+        <item>Shchors</item>
+    </string-array>
+    <string-array name="citiesSumy">
+        <item>Sumy</item>
+        <item>Konotop</item>
+        <item>Shostka</item>
+        <item>Ohtyrka</item>
+        <item>Romny</item>
+        <item>Hlukhiv</item>
+        <item>Lebedyn</item>
+        <item>Bilopillia</item>
+        <item>Krasnopillia</item>
+        <item>Buryn</item>
+        <item>Trostianets</item>
+        <item>Seredyna-Buda</item>
+        <item>Putyvl</item>
+        <item>Kharkiv</item>
+        <item>Hadyach</item>
+        <item>Bezhantsi</item>
+        <item>Velyka Pyssariivka</item>
+        <item>Bohodukhiv</item>
+        <item>Kozacha Lopan</item>
+        <item>Nedryhailiv</item>
+        <item>Oriilka</item>
+        <item>Petrykivka</item>
+        <item>Poltavka</item>
+        <item>Rozdilna</item>
+        <item>Savintsі</item>
+        <item>Solonytsivka</item>
+        <item>Tereshchivka</item>
+        <item>Trostianets</item>
+        <item>Uhroiidy</item>
+        <item>Fastivtseve</item>
+        <item>Khyrivka</item>
+        <item>Chernukhy</item>
+    </string-array>
+    <string-array name="citiesTernopil">
+        <item>Ternopil</item>
+        <item>Chortkiv</item>
+        <item>Kremenets</item>
+        <item>Berezhany</item>
+        <item>Zbarazh</item>
+        <item>Terebovlia</item>
+        <item>Pidvolochysk</item>
+        <item>Lanivtsi</item>
+        <item>Husiatyn</item>
+        <item>Borshchiv</item>
+        <item>Zalishchyky</item>
+        <item>Zboriv</item>
+        <item>Kozova</item>
+        <item>Kopychyntsi</item>
+        <item>Monastyryiska</item>
+        <item>Podibtsi</item>
+        <item>Skalat</item>
+        <item>Chornotysivka</item>
+        <item>Shumsk</item>
+        <item>Zarvanytsia</item>
+        <item>Velyki Birky</item>
+        <item>Horodenka</item>
+        <item>Zaliztsi</item>
+        <item>Zbarazh</item>
+        <item>Kopychyntsi</item>
+        <item>Kremenets</item>
+        <item>Kryvche</item>
+        <item>Lishchynci</item>
+        <item>Monastyryiska</item>
+        <item>Novosilky</item>
+        <item>Pochayiv</item>
+        <item>Skalat</item>
+        <item>Stebnyk</item>
+        <item>Stupky</item>
+        <item>Terebovlia</item>
+        <item>Tovste</item>
+        <item>Trostyantsi</item>
+        <item>Chornotysivka</item>
+    </string-array>
+    <string-array name="citiesKharkiv">
+        <item>Kharkiv</item>
+        <item>Izium</item>
+        <item>Lozova</item>
+        <item>Chuhuiv</item>
+        <item>Pervomaiskyi</item>
+        <item>Kupiansk</item>
+        <item>Derhachi</item>
+        <item>Balakliia</item>
+        <item>Vovchansk</item>
+        <item>Krasnohrad</item>
+        <item>Komsomolsk</item>
+        <item>Merefа</item>
+        <item>Novovodolazkyi</item>
+        <item>Pivdennyi</item>
+        <item>Pokotyliovka</item>
+        <item>Bohodukhiv</item>
+        <item>Borivskyi</item>
+        <item>Valky</item>
+        <item>Dvorichna</item>
+        <item>Zachepylivka</item>
+        <item>Zmiiv</item>
+        <item>Korotych</item>
+        <item>Krasnokutska</item>
+        <item>Krasnopavlivka</item>
+        <item>Kupianske</item>
+        <item>Liubotyn</item>
+        <item>Mala Danylivka</item>
+        <item>Nova Vodolaha</item>
+        <item>Pervomaiskyi</item>
+        <item>Petrovske</item>
+        <item>Sakhnovshchyna</item>
+        <item>Siversk</item>
+        <item>Chuhuivskyi</item>
+        <item>Shevchenkivskyi</item>
+    </string-array>
+    <string-array name="citiesKherson">
+        <item>Kherson</item>
+        <item>Nova Kakhovka</item>
+        <item>Kakhovka</item>
+        <item>Skadovsk</item>
+        <item>Tsyurupynsk</item>
+        <item>Beryslav</item>
+        <item>Henichesk</item>
+        <item>Hola Prystan</item>
+        <item>Kamianka-Dniprovska</item>
+        <item>Kakhovka</item>
+        <item>Nyzhnohirskyi</item>
+        <item>Novotroitske</item>
+        <item>Oleshkivskyi</item>
+        <item>Skadovsk</item>
+        <item>Tavriisk</item>
+        <item>Velykooleksandrivskyi</item>
+        <item>Visokopilskyi</item>
+        <item>Holoprystanskyi</item>
+        <item>Kakhovskyi</item>
+        <item>Nyzhnohirskyi</item>
+        <item>Novotroitskyi</item>
+        <item>Oleshkivskyi</item>
+        <item>Skadovskyi</item>
+        <item>Tavriiskyi</item>
+    </string-array>
+    <string-array name="citiesCherkasy">
+        <item>Cherkasy</item>
+        <item>Uman</item>
+        <item>Zolotonosha</item>
+        <item>Smila</item>
+        <item>Kaniv</item>
+        <item>Korsun-Shevchenkivskyi</item>
+        <item>Zhashkiv</item>
+        <item>Kamianka</item>
+        <item>Talne</item>
+        <item>Shpola</item>
+        <item>Katerinopil</item>
+        <item>Chyhyryn</item>
+        <item>Zvenyhorodka</item>
+        <item>Vatutine</item>
+        <item>Kryzhopil</item>
+        <item>Kanivskyi</item>
+        <item>Monastyryshchenskyi</item>
+        <item>Smilianskyi</item>
+        <item>Umanskyi</item>
+        <item>Khrystynivskyi</item>
+        <item>Cherkaskyi</item>
+        <item>Katerinopilskyi</item>
+        <item>Chyhyrynskyi</item>
+        <item>Shpolyanskyi</item>
+    </string-array>
+    <string-array name="citiesChernivtsi">
+        <item>Chernivtsi</item>
+        <item>Novoselytsia</item>
+        <item>Storozhynets</item>
+        <item>Kitsman</item>
+        <item>Vashkivtsi</item>
+        <item>Zastavna</item>
+        <item>Kelmentsi</item>
+        <item>Sokyriany</item>
+        <item>Putyla</item>
+        <item>Hotyn</item>
+        <item>Hertsa</item>
+        <item>Storozhynetskyi</item>
+        <item>Novoselytskyi</item>
+        <item>Kelmentskyi</item>
+        <item>Putylskyi</item>
+        <item>Sokyrianytskyi</item>
+        <item>Hotynskyi</item>
+    </string-array>
+    <string-array name="citiesChernihiv">
+        <item>Chernihiv</item>
+        <item>Nizhyn</item>
+        <item>Pryluky</item>
+        <item>Snovsk</item>
+        <item>Ichnya</item>
+        <item>Mena</item>
+        <item>Bakhmach</item>
+        <item>Novhorod-Siverskyi</item>
+        <item>Kozelets</item>
+        <item>Sedniv</item>
+        <item>Koriukivka</item>
+        <item>Bobrovytsia</item>
+        <item>Sosnytsia</item>
+        <item>Nizhynskyi</item>
+        <item>Prylutske</item>
+        <item>Ichnianskyi</item>
+        <item>Menskyi</item>
+        <item>Novhorod-Siverskyi district</item>
+        <item>Sosnytskiy</item>
+    </string-array>
+    <string-array name="citiesKhmelnytsk">
+        <item>Khmelnytskyi</item>
+        <item>Kamianets-Podilskyi</item>
+        <item>Starokostiantyniv</item>
+        <item>Krasyliv</item>
+        <item>Derazhnia</item>
+        <item>Netishyn</item>
+        <item>Polonne</item>
+        <item>Izyaslav</item>
+        <item>Slavuta</item>
+        <item>Shepetivka</item>
+    </string-array>
+</resources>
