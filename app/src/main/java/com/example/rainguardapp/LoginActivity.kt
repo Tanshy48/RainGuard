@@ -5,21 +5,26 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.location.Address
+import android.location.Geocoder
 import android.location.LocationManager
+import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
+import android.util.Log
+import android.view.View
 import android.widget.ProgressBar
+import android.widget.RelativeLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import android.widget.TextView
 import com.google.android.gms.location.*
+import java.io.IOException
+import java.util.*
 import java.util.concurrent.TimeUnit
-import android.location.Geocoder
-import android.view.View
-import java.util.Locale
 
 
 class LoginActivity : AppCompatActivity() {
@@ -28,33 +33,40 @@ class LoginActivity : AppCompatActivity() {
     lateinit var locationRequest: LocationRequest
     val REQUEST_CODE = 101
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        progressBar = findViewById(R.id.progressBar)
-        progressBar.visibility = ProgressBar.VISIBLE
-        val value = intent.getStringExtra("key1")
-        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
-        getLocation()
-}
+        findLocation().execute()
+    }
+    inner class findLocation() : AsyncTask<String, Void, String>(){
+        override fun onPreExecute() {
+            super.onPreExecute()
+            findViewById<ProgressBar>(R.id.progressBar).visibility = View.VISIBLE
+        }
+        override fun doInBackground(vararg p0: String?): String? {
+            fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this@LoginActivity)
+            getLocation()
+            return null
+        }
+
+    }
 
     @SuppressLint("MissingPermission")
     private fun getLocation() {
         if(checkPermissions()) {
             if(isLocationEnabled()){
-
                 fusedLocationProviderClient.lastLocation.addOnCompleteListener { task ->
                     val location = task.result
                     if (location == null)
                         getNewLocation()
 
                     val intent = Intent(this, MainActivity::class.java)
-                    intent.putExtra("lat", location.latitude)
-                    intent.putExtra("lon", location.longitude)
+                    val res = getAddress(location.latitude, location.longitude)
+                    Log.i("Address", res.toString())
+                    intent.putExtra("Address", res)
                     startActivity(intent)
-
                 }
-
             } else {
                 Toast.makeText(this, "Turn on location", Toast.LENGTH_SHORT).show()
                 val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
@@ -66,13 +78,21 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    private fun getAddress(latitude: Double, longitude: Double): String? {
+        var addressName = ""
+        val geoCoder = Geocoder(this, Locale.getDefault())
+        val address = geoCoder.getFromLocation(latitude, longitude, 1)
+        addressName = address!![0].locality
+        return addressName
+    }
+
     @SuppressLint("MissingPermission")
     private fun getNewLocation() {
         locationRequest = LocationRequest()
         locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        locationRequest.interval = 0
-        locationRequest.fastestInterval = 0
-        locationRequest.numUpdates = 2
+        locationRequest.interval = 1
+        locationRequest.fastestInterval = 1
+        locationRequest.numUpdates = 1
 
         fusedLocationProviderClient!!.requestLocationUpdates(
             locationRequest, locationCallback, Looper.myLooper()
@@ -83,7 +103,6 @@ class LoginActivity : AppCompatActivity() {
 
     private val locationCallback = object : LocationCallback(){
         override fun onLocationResult(p0: LocationResult) {
-            var lastLocation = p0.lastLocation
         }
     }
 
