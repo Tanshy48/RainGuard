@@ -7,31 +7,37 @@
     android:background="#050657">
 
     <LinearLayout
-        android:layout_marginBottom="25px"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#1C2D4D"
-        android:orientation="vertical">
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:padding="50px">
 
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="50dp"
+            app:srcCompat="@drawable/background_login_activity" />
 
         <Button
             android:id="@+id/button5"
-            android:layout_width="271dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="25px"
+            android:layout_margin="25dp"
             android:background="#D9D9D9"
+            android:backgroundTint="#D9D9D9"
             android:onClick="chooseCity"
-            android:backgroundTint ="#D9D9D9"
             android:text="@string/Button16"
             android:textColor="#000" />
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="271dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="25px"
+            android:layout_margin="25dp"
             android:background="#D9D9D9"
             android:backgroundTint="#D9D9D9"
             android:onClick="reportProblem"
@@ -41,11 +47,11 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="365px"
-            android:layout_marginHorizontal="50px"
-            android:layout_marginTop="900px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="25dp"
             android:background="#4E6573"
+            android:padding="25px"
             android:text="@string/Button18"
             android:textColor="#000" />
 

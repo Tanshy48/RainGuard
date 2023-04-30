@@ -20,6 +20,11 @@
         <string name="Text15">Увімкнути сповіщення про надзвичайні ситуації</string>
         <string name="Button16">Обрати інше місто</string>
         <string name="Button17">Сповістити про проблему</string>
-        <string name="Button18">Дані взято з сайту https://www.meteo.gov.ua/ </string>
+        <string name="Button18">Баняс Володимир Володимирович – UI/UX Designer,
+Теслевич Михайло Іванович – developer,
+Шишканич Тетяна Вадимівна – team leader, developer
+Дані взято з сайту openweathermap.org (https://openweathermap.org/current)</string>
+        <string name="reportText">Опишіть вашу проблему</string>
+        <string name="readyReportButton">Дякуємо за інформацію</string>
 
     </resources>

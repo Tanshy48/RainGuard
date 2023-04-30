@@ -28,7 +28,6 @@ import java.util.concurrent.TimeUnit
 
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var progressBar: ProgressBar
     lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     lateinit var locationRequest: LocationRequest
     val REQUEST_CODE = 101
@@ -140,8 +139,7 @@ class LoginActivity : AppCompatActivity() {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 getLocation()
             } else {
-                TimeUnit.SECONDS.sleep(2L)
-                progressBar.visibility = ProgressBar.INVISIBLE
+
                 val intent = Intent(this, LocationsOB::class.java)
                 startActivity(intent)
             }
