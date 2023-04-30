@@ -6,16 +6,13 @@
         <string name="Text1">Виберіть область</string>
         <string name="Text2">Виберіть місто</string>
         <string name="Button3">Назад</string>
-        <string name="Button8">C</string>
-        <string name="Button9">F</string>
-        <string name="Button10">км/год</string>
-        <string name="Button11">м/с</string>
+        <string name="Button8">Метрична</string>
+        <string name="Button9">Англійська</string>
         <string name="Button12">English</string>
         <string name="Button13">Українська</string>
         <string name="Button14">Так</string>
         <string name="Button15">Ні</string>
-        <string name="Text12">Одиниці виміру температури</string>
-        <string name="Text13">Одиниці виміру швидкості вітру</string>
+        <string name="Text12">Одиниці виміру</string>
         <string name="Text14">Мова</string>
         <string name="Text15">Увімкнути сповіщення про надзвичайні ситуації</string>
         <string name="Button16">Обрати інше місто</string>
@@ -26,5 +23,13 @@
 Дані взято з сайту openweathermap.org (https://openweathermap.org/current)</string>
         <string name="reportText">Опишіть вашу проблему</string>
         <string name="readyReportButton">Дякуємо за інформацію</string>
+        <string name="TemMin">Мін. темп. </string>
+        <string name="TemMax">Макс. темп. </string>
+        <string name="wind">Вітер</string>
+        <string name="sunrise">Cхід сонця</string>
+        <string name="sunset">Захід сонця</string>
+        <string name="humidity">Вологість</string>
+        <string name="pressure">Тиск</string>
+        <string name="ShowMore">Показати Більше</string>
 
     </resources>
