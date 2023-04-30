@@ -11,7 +11,7 @@ import java.util.*
 class Setting : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(com.example.rainguardapp.R.layout.setting)
+        setContentView(R.layout.setting)
     }
     fun LanguageENG(view: View) {
         val lang = "en"

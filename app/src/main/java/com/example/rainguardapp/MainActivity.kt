@@ -18,12 +18,25 @@ class MainActivity : AppCompatActivity() {
     lateinit var CITY: String
     val API: String = "d78a400532d5206b8ee146c6946a2706"
     lateinit var showMoreButton: Button
+    lateinit var optionButton: Button
+    lateinit var additionalPageButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         CITY = intent.getStringExtra("Address").toString()
         weatherTask().execute()
+        optionButton = findViewById(R.id.settings)
+        additionalPageButton = findViewById(R.id.additionalPage)
         showMoreButton = findViewById(R.id.showMore)
+        additionalPageButton.setOnClickListener {
+            val intent = Intent(this, AdditionalPage::class.java)
+
+            startActivity(intent)
+        }
+        optionButton.setOnClickListener{
+            val intent = Intent(this, Setting::class.java)
+            startActivity(intent)
+        }
         showMoreButton.setOnClickListener {
             val intent = Intent(this, FourDaysWeatherCast::class.java)
             intent.putExtra("Address", CITY)

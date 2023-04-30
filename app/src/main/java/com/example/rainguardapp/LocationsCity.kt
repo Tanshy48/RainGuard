@@ -4,6 +4,7 @@ import android.R
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
@@ -11,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class LocationsCity:AppCompatActivity() {
     lateinit var adapter: ArrayAdapter<CharSequence>
+    lateinit var city: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         supportActionBar?.hide()
@@ -222,6 +224,24 @@ class LocationsCity:AppCompatActivity() {
         }
         adapter.setDropDownViewResource(R.layout.simple_spinner_dropdown_item)
         spinner.setAdapter(adapter)
+        val itemSelectedListener: AdapterView.OnItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View,
+                    position: Int,
+                    id: Long
+                ) {
+
+                    city = parent.getItemAtPosition(position) as String
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
+            }
+
+        spinner.onItemSelectedListener = itemSelectedListener
     }
         fun Back(view: View) {
             val intent = Intent(this, LocationsOB::class.java)
@@ -229,8 +249,7 @@ class LocationsCity:AppCompatActivity() {
         }
     fun Start(view: View){
         val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("Address", city)
         startActivity(intent)
     }
-
-
-    }
+}

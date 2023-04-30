@@ -20,5 +20,7 @@
         <string name="Text15">Enable emergency notifications</string>
         <string name="Button16">Choose another city</string>
         <string name="Button17">Report a problem</string>
-        <string name="Button18">The data is taken from the site https://www.meteo.gov.ua/ </string>
+        <string name="Button18">The data is taken from the site openweathermap.org (https://openweathermap.org/current) </string>
+        <string name="reportText">Describe your problem</string>
+        <string name="readyReportButton">Thanks for the information</string>
     </resources>
