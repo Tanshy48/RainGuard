@@ -3,6 +3,7 @@ package com.example.rainguardapp
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ProgressBar
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
     lateinit var showMoreButton: Button
     lateinit var optionButton: Button
     lateinit var additionalPageButton: Button
+    lateinit var windSpeed:String
+    lateinit var temp:String
+    lateinit var tempMax:String
+    lateinit var tempMin:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         }
         optionButton.setOnClickListener{
             val intent = Intent(this, Setting::class.java)
+            intent.putExtra("Address", CITY)
             startActivity(intent)
         }
         showMoreButton.setOnClickListener {
@@ -42,6 +48,14 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("Address", CITY)
             startActivity(intent)
         }
+    }
+    fun toSetting(view: View){
+        val intent = Intent(this@MainActivity, Setting::class.java)
+        startActivity(intent)
+    }
+    fun toAdd(view: View){
+        val intent = Intent(this@MainActivity, AdditionalPage::class.java)
+        startActivity(intent)
     }
     inner class weatherTask() : AsyncTask<String, Void, String>() {
         override fun onPreExecute() {
@@ -53,9 +67,19 @@ class MainActivity : AppCompatActivity() {
         override fun doInBackground(vararg params: String?): String? {
             var response:String?
             try{
-                response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API").readText(
-                    Charsets.UTF_8
-                )
+                val value = intent.getStringExtra("key")
+                when (value){
+                    "0" -> response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API").readText(
+                        Charsets.UTF_8
+                    )
+                    "1" -> response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&appid=$API").readText(
+                        Charsets.UTF_8
+                    )
+                    else -> response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API").readText(
+                        Charsets.UTF_8
+                    )
+                }
+
             }catch (e: Exception){
                 response = null
             }
@@ -63,23 +87,41 @@ class MainActivity : AppCompatActivity() {
         }
         override fun onPostExecute(result: String?) {
             super.onPostExecute(result)
+
             try {
+                val value = intent.getStringExtra("key")
                 /* Extracting JSON returns from the API */
                 val jsonObj = JSONObject(result)
                 val main = jsonObj.getJSONObject("main")
                 val sys = jsonObj.getJSONObject("sys")
                 val wind = jsonObj.getJSONObject("wind")
+                when (value){
+                    "0" -> {
+                        windSpeed = " " + wind.getString("speed")+" м/s"
+                        temp = " " + main.getString("temp") + "°C"
+                        tempMin = " " + main.getString("temp_min") + "°C"
+                        tempMax = " " + main.getString("temp_max") + "°C"
+                    }
+                    "1" -> {
+                        windSpeed = " " + wind.getString("speed")+"ft/s"
+                        temp = " " + main.getString("temp") + "°F"
+                        tempMin =  " " + main.getString("temp_min") + "°F"
+                        tempMax =  " " + main.getString("temp_max") + "°F"
+                    }
+                    else -> {
+                        windSpeed = " " + wind.getString("speed") + "м/s"
+                        temp = " " + main.getString("temp") + "°C"
+                        tempMin = " " + main.getString("temp_min") + "°C"
+                        tempMax = " " + main.getString("temp_max") + "°C"
+                    }
+                }
                 val weather = jsonObj.getJSONArray("weather").getJSONObject(0)
                 val updatedAt:Long = jsonObj.getLong("dt")
                 val updatedAtText = "Updated at: "+ SimpleDateFormat("dd/MM/yyyy hh:mm a", Locale.ENGLISH).format(Date(updatedAt*1000))
-                val temp = main.getString("temp")+"°C"
-                val tempMin = "Min Temp: " + main.getString("temp_min")+"°C"
-                val tempMax = "Max Temp: " + main.getString("temp_max")+"°C"
                 val pressure = main.getString("pressure")
                 val humidity = main.getString("humidity")
                 val sunrise:Long = sys.getLong("sunrise")
                 val sunset:Long = sys.getLong("sunset")
-                val windSpeed = wind.getString("speed")
                 val weatherDescription = weather.getString("description")
                 val address = jsonObj.getString("name")+", "+sys.getString("country")
                 /* Populating extracted data into our views */
@@ -87,8 +129,8 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.updated_at).text =  updatedAtText
                 findViewById<TextView>(R.id.status).text = weatherDescription.capitalize()
                 findViewById<TextView>(R.id.temp).text = temp
-                findViewById<TextView>(R.id.temp_min).text = tempMin
-                findViewById<TextView>(R.id.temp_max).text = tempMax
+                findViewById<TextView>(R.id.temp_min1).text = tempMin
+                findViewById<TextView>(R.id.temp_max1).text = tempMax
                 findViewById<TextView>(R.id.sunrise).text = SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(sunrise*1000))
                 findViewById<TextView>(R.id.sunset).text = SimpleDateFormat("hh:mm a", Locale.ENGLISH).format(Date(sunset*1000))
                 findViewById<TextView>(R.id.wind).text = windSpeed
@@ -104,3 +146,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+

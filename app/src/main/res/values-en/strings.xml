@@ -6,21 +6,29 @@
         <string name="Text1">Select an area</string>
         <string name="Text2">Select а city</string>
         <string name="Button3">Back</string>
-        <string name="Button8">C</string>
-        <string name="Button9">F</string>
-        <string name="Button10">km/h</string>
-        <string name="Button11">m/s</string>
+        <string name="Button8">International</string>
+        <string name="Button9">Imperial</string>
         <string name="Button12">English</string>
         <string name="Button13">Українська</string>
         <string name="Button14">Yes</string>
         <string name="Button15">No</string>
-        <string name="Text12">Temperature measurement units</string>
-        <string name="Text13">Wind speed measurement units</string>
+        <string name="Text12">System of Units</string>
         <string name="Text14">Language</string>
         <string name="Text15">Enable emergency notifications</string>
         <string name="Button16">Choose another city</string>
         <string name="Button17">Report a problem</string>
-        <string name="Button18">The data is taken from the site openweathermap.org (https://openweathermap.org/current) </string>
+        <string name="Button18">Volodymyr Volodymyrovych Banyas – UI/UX Designer,
+Mykhailo Ivanovich Teslevych – developer,
+Tetyana Vadimovna Shishkanych – team leader, developer
+            The data is taken from the site openweathermap.org (https://openweathermap.org/current) </string>
         <string name="reportText">Describe your problem</string>
         <string name="readyReportButton">Thanks for the information</string>
+        <string name="TemMin">Min Temp </string>
+        <string name="TemMax">Max Temp </string>
+        <string name="wind">Wind</string>
+        <string name="sunrise">Sunrise</string>
+        <string name="sunset">Sunset</string>
+        <string name="humidity">Humidity</string>
+        <string name="pressure">Pressure</string>
+        <string name="ShowMore">Show More</string>
     </resources>
