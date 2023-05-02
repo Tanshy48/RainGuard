@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            android:background="#80B7BFF9"
             android:orientation="horizontal">
 
             <TextView
@@ -69,6 +70,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            android:background="#80B7BFF9"
             android:orientation="horizontal">
 
             <TextView
@@ -117,6 +119,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            android:background="#80B7BFF9"
             android:orientation="horizontal">
 
             <TextView
@@ -165,6 +168,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="30dp"
+            android:background="#80B7BFF9"
             android:orientation="horizontal">
 
             <TextView
@@ -212,6 +216,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#80B7BFF9"
             android:orientation="horizontal">
 
             <TextView
