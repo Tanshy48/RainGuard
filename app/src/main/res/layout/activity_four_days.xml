@@ -2,276 +2,274 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:background="@drawable/bgim2"
+    android:padding="10dp"
+    android:layout_width="match_parent">
 
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:id="@+id/mainContainer"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="start"
-            android:orientation="vertical" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/avgTemp1"
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center"
-                    android:text="22.5C" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/date1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="02.05 12:00:00" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/temp_min_max1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="temp_min"
-                            />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/status1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Сонячно" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/avgTemp2"
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="22.5C" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-
-                    <TextView
-                        android:id="@+id/date2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="02.05 12:00:00" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/temp_min_max2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="temp_min"
-                            />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/status2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Сонячно" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/avgTemp3"
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="22.5C" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-
-                    <TextView
-                        android:id="@+id/date3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="02.05 12:00:00" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/temp_min_max3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="temp_min"
-                            />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/status3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Сонячно" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/avgTemp4"
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="22.5C" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                    <TextView
-                        android:id="@+id/date4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="02.05 12:00:00" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/temp_min_max4"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="temp_min"
-                            />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/status4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Сонячно" />
-                </LinearLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/avgTemp5"
-                    android:layout_width="124dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="22.5C" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-
-                    <TextView
-                        android:id="@+id/date5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="02.05 12:00:00" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/temp_min_max5"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="temp_min"
-                            />
-
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/status5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Сонячно" />
-                </LinearLayout>
-            </LinearLayout>
-            <ProgressBar
-                android:id="@+id/loader"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:visibility="gone"/>
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/errorText"
-                android:layout_width="wrap_content"
+                android:id="@+id/avgTemp1"
+                android:layout_width="124dp"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:visibility="gone"
-                android:text="Something went wrong"/>
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="22.5C" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/date1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="02.05 12:00:00" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/temp_min_max1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="temp_min" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/status1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сонячно" />
+            </LinearLayout>
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/avgTemp2"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="22.5C" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/date2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="02.05 12:00:00" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/temp_min_max2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="temp_min" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/status2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сонячно" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/avgTemp3"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="22.5C" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/date3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="02.05 12:00:00" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/temp_min_max3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="temp_min" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/status3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сонячно" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/avgTemp4"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="22.5C" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/date4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="02.05 12:00:00" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/temp_min_max4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="temp_min" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/status4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сонячно" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/avgTemp5"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="22.5C" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/date5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="02.05 12:00:00" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/temp_min_max5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="temp_min" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/status5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Сонячно" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Something went wrong"
+            android:visibility="gone" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
