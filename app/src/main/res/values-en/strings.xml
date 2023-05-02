@@ -23,6 +23,7 @@ Tetyana Vadimovna Shishkanych – team leader, developer
             The data is taken from the site openweathermap.org (https://openweathermap.org/current) </string>
         <string name="reportText">Describe your problem</string>
         <string name="readyReportButton">Thanks for the information</string>
+        <string name="enteryourEmail">Enter your email</string>
         <string name="TemMin">Min Temp </string>
         <string name="TemMax">Max Temp </string>
         <string name="wind">Wind</string>

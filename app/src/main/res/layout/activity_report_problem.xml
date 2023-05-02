@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="25dp"
-        android:background="#9bbdf4"
+        android:background="@drawable/reporting"
         >
 
 
@@ -21,8 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:textSize="30sp"
-            android:text="@string/reportText" />
+            android:text="@string/reportText"
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
