@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
-            android:background="#4DBE5869"
+            android:background="#4D292E49"
 
             android:padding="25px"
             android:text="@string/Button18"

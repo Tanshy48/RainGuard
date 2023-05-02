@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bgim3">
+    android:background="@drawable/gradient3">
 
     <RelativeLayout
         android:id="@+id/mainContainer"
@@ -88,6 +88,14 @@
                 android:text="29°C"
                 android:textSize="90dp" />
 
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/cloud" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,6 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="" />
+
             </LinearLayout>
         </LinearLayout>
 
@@ -128,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/overviewContainer"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="75dp"
+            android:layout_marginTop="50dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -333,26 +342,26 @@
                     android:orientation="vertical"
                     android:padding="8dp">
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        app:tint="#FFFFFF" />
-
                     <Space
                         android:layout_width="wrap_content"
-                        android:layout_height="5dp" />
+                        android:layout_height="8dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Thanks for"
-                        android:textSize="12dp" />
+                        android:textSize="14dp" />
 
                     <TextView
                         android:id="@+id/about"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="choosing this app"
+                        android:text="choosing"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="this app"
                         android:textSize="14dp" />
 
 
