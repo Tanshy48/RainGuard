@@ -381,6 +381,7 @@
                     android:layout_gravity="center"
                     android:backgroundTint="#EBEEF0"
                     android:gravity="center_horizontal|center_vertical"
+                    android:onClick="More"
                     android:text="@string/ShowMore"
                     android:textSize="12sp"
                     android:textStyle="italic" />

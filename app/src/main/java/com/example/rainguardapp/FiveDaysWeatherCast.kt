@@ -7,22 +7,19 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
-import kotlinx.serialization.decodeFromString
-import kotlinx.serialization.json.Json
 import org.json.JSONObject
 import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.*
 
-class FourDaysWeatherCast : AppCompatActivity() {
+class FiveDaysWeatherCast : AppCompatActivity() {
     lateinit var CITY: String
+    lateinit var value: String
     val API: String = "d78a400532d5206b8ee146c6946a2706"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_four_days)
+        setContentView(R.layout.activity_five_days)
         CITY = intent.getStringExtra("Address").toString()
         weatherTask().execute()
     }
@@ -37,12 +34,22 @@ class FourDaysWeatherCast : AppCompatActivity() {
 
         override fun doInBackground(vararg params: String?): String? {
             var response: String?
-            Log.i("cityName", CITY)
+            value = intent.getStringExtra("more").toString()
             try {
-                response =
-                    URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&units=metric&appid=$API").readText(
-                        Charsets.UTF_8
-                    )
+                when (value){
+                    "0"-> response =
+                        URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&units=metric&appid=$API").readText(
+                            Charsets.UTF_8
+                        )
+                    "1"->response =
+                        URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&appid=$API").readText(
+                            Charsets.UTF_8
+                        )
+                    else -> response =
+                        URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&units=metric&appid=$API").readText(
+                            Charsets.UTF_8
+                        )
+                }
             } catch (e: Exception) {
                 response = null
             }
@@ -86,27 +93,40 @@ class FourDaysWeatherCast : AppCompatActivity() {
                 findViewById<TextView>(R.id.avgTemp1).text = averageTemperatures[0]
                 findViewById<TextView>(R.id.date1).text = datesString[0]
                 findViewById<TextView>(R.id.status1).text = descriptions[0]
-                findViewById<TextView>(R.id.temp_min_max1).text = "Min Temp: " + minTemperatures[0] + "°C" + "/Max Temp: " + maxTemperatures[0] +"°C"
+                value = intent.getStringExtra("more").toString()
+                when(value){
+                    "0" -> findViewById<TextView>(R.id.temp_min_max1).text = "Min Temp: " + minTemperatures[0] + "°C" + "/Max Temp: " + maxTemperatures[0] +"°C"
+                    "1" -> findViewById<TextView>(R.id.temp_min_max1).text = "Min Temp: " + minTemperatures[0] + "°F" + "/Max Temp: " + maxTemperatures[0] +"°F"
+                    else -> findViewById<TextView>(R.id.temp_min_max1).text = "Min Temp: " + minTemperatures[0] + "°C" + "/Max Temp: " + maxTemperatures[0] +"°C"
+                }
                 val imageView1 = findViewById<ImageView>(R.id.icon1)
-                Glide.with(this@FourDaysWeatherCast)
+                Glide.with(this@FiveDaysWeatherCast)
                     .load(imgsrc[0])
                     .into(imageView1)
 
                 findViewById<TextView>(R.id.avgTemp2).text = averageTemperatures[1]
                 findViewById<TextView>(R.id.date2).text = datesString[1]
                 findViewById<TextView>(R.id.status2).text = descriptions[1]
-                findViewById<TextView>(R.id.temp_min_max2).text = "Min Temp: " + minTemperatures[1] + "°C" + "/Max Temp: " + maxTemperatures[1] +"°C"
+                when(value){
+                    "0" -> findViewById<TextView>(R.id.temp_min_max2).text = "Min Temp: " + minTemperatures[1] + "°C" + "/Max Temp: " + maxTemperatures[1] +"°C"
+                    "1" -> findViewById<TextView>(R.id.temp_min_max2).text = "Min Temp: " + minTemperatures[1] + "°F" + "/Max Temp: " + maxTemperatures[1] +"°F"
+                    else -> findViewById<TextView>(R.id.temp_min_max2).text = "Min Temp: " + minTemperatures[1] + "°C" + "/Max Temp: " + maxTemperatures[1] +"°C"
+                }
                 val imageView2 = findViewById<ImageView>(R.id.icon2)
-                Glide.with(this@FourDaysWeatherCast)
+                Glide.with(this@FiveDaysWeatherCast)
                     .load(imgsrc[1])
                     .into(imageView2)
 
                 findViewById<TextView>(R.id.avgTemp3).text = averageTemperatures[2]
                 findViewById<TextView>(R.id.date3).text = datesString[2]
                 findViewById<TextView>(R.id.status3).text = descriptions[2]
-                findViewById<TextView>(R.id.temp_min_max3).text = "Min Temp: " + minTemperatures[2] + "°C" + "/Max Temp: " + maxTemperatures[2] +"°C"
+                when(value){
+                    "0" -> findViewById<TextView>(R.id.temp_min_max3).text = "Min Temp: " + minTemperatures[2] + "°C" + "/Max Temp: " + maxTemperatures[2] +"°C"
+                    "1" -> findViewById<TextView>(R.id.temp_min_max3).text = "Min Temp: " + minTemperatures[2] + "°F" + "/Max Temp: " + maxTemperatures[2] +"°F"
+                    else -> findViewById<TextView>(R.id.temp_min_max3).text = "Min Temp: " + minTemperatures[2] + "°C" + "/Max Temp: " + maxTemperatures[2] +"°C"
+                }
                 val imageView3 = findViewById<ImageView>(R.id.icon3)
-                Glide.with(this@FourDaysWeatherCast)
+                Glide.with(this@FiveDaysWeatherCast)
                     .load(imgsrc[2])
                     .into(imageView3)
 
@@ -114,18 +134,26 @@ class FourDaysWeatherCast : AppCompatActivity() {
                 findViewById<TextView>(R.id.avgTemp4).text = averageTemperatures[3]
                 findViewById<TextView>(R.id.date4).text = datesString[3]
                 findViewById<TextView>(R.id.status4).text = descriptions[3]
-                findViewById<TextView>(R.id.temp_min_max4).text = "Min Temp: " + minTemperatures[3] + "°C" + "/Max Temp: " + maxTemperatures[3] +"°C"
+                when(value){
+                    "0" -> findViewById<TextView>(R.id.temp_min_max4).text = "Min Temp: " + minTemperatures[3] + "°C" + "/Max Temp: " + maxTemperatures[3] +"°C"
+                    "1" -> findViewById<TextView>(R.id.temp_min_max4).text = "Min Temp: " + minTemperatures[3] + "°F" + "/Max Temp: " + maxTemperatures[3] +"°F"
+                    else -> findViewById<TextView>(R.id.temp_min_max4).text = "Min Temp: " + minTemperatures[3] + "°C" + "/Max Temp: " + maxTemperatures[3] +"°C"
+                }
                 val imageView4 = findViewById<ImageView>(R.id.icon4)
-                Glide.with(this@FourDaysWeatherCast)
+                Glide.with(this@FiveDaysWeatherCast)
                     .load(imgsrc[3])
                     .into(imageView4)
 
                 findViewById<TextView>(R.id.avgTemp5).text = averageTemperatures[4]
                 findViewById<TextView>(R.id.date5).text = datesString[4]
                 findViewById<TextView>(R.id.status5).text = descriptions[4]
-                findViewById<TextView>(R.id.temp_min_max5).text = "Min Temp: " + minTemperatures[4] + "°C" + "/Max Temp: " + maxTemperatures[4] +"°C"
+                when(value){
+                    "0" -> findViewById<TextView>(R.id.temp_min_max5).text = "Min Temp: " + minTemperatures[4] + "°C" + "/Max Temp: " + maxTemperatures[4] +"°C"
+                    "1" -> findViewById<TextView>(R.id.temp_min_max5).text = "Min Temp: " + minTemperatures[4] + "°F" + "/Max Temp: " + maxTemperatures[4] +"°F"
+                    else -> findViewById<TextView>(R.id.temp_min_max5).text = "Min Temp: " + minTemperatures[4] + "°C" + "/Max Temp: " + maxTemperatures[4] +"°C"
+                }
                 val imageView5 = findViewById<ImageView>(R.id.icon5)
-                Glide.with(this@FourDaysWeatherCast)
+                Glide.with(this@FiveDaysWeatherCast)
                     .load(imgsrc[4])
                     .into(imageView5)
 

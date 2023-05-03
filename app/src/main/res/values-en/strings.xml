@@ -32,4 +32,8 @@ Tetyana Vadimovna Shishkanych – team leader, developer
         <string name="humidity">Humidity</string>
         <string name="pressure">Pressure</string>
         <string name="ShowMore">Show More</string>
+        <string name="TempMin5">Temp Min:</string>
+        <string name="TempMax5">Temp Max:</string>
+        <string name="Sunny">Sunny</string>
+        <string name="Wrong">Something went wrong</string>
     </resources>
