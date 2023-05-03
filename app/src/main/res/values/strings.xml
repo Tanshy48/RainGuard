@@ -22,6 +22,7 @@
 Шишканич Тетяна Вадимівна – team leader, developer
 Дані взято з сайту openweathermap.org (https://openweathermap.org/current)</string>
         <string name="reportText">Опишіть вашу проблему</string>
+        <string name="enteryourEmail">Введіть вашу електронну пошту</string>
         <string name="readyReportButton">Дякуємо за інформацію</string>
         <string name="TemMin">Мін. темп. </string>
         <string name="TemMax">Макс. темп. </string>

@@ -3,9 +3,11 @@ package com.example.rainguardapp
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
+import com.bumptech.glide.Glide
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -30,14 +32,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         CITY = intent.getStringExtra("Address").toString()
         weatherTask().execute()
+
         optionButton = findViewById(R.id.settings)
         additionalPageButton = findViewById(R.id.additionalPage)
         showMoreButton = findViewById(R.id.showMore)
+
         additionalPageButton.setOnClickListener {
             val intent = Intent(this, AdditionalPage::class.java)
-
             startActivity(intent)
         }
+
         optionButton.setOnClickListener{
             val intent = Intent(this, Setting::class.java)
             intent.putExtra("Address", CITY)
@@ -124,6 +128,7 @@ class MainActivity : AppCompatActivity() {
                 val sunset:Long = sys.getLong("sunset")
                 val weatherDescription = weather.getString("description")
                 val address = jsonObj.getString("name")+", "+sys.getString("country")
+                val imgsrc = "https://openweathermap.org/img/wn/${weather.getString("icon")}.png"
                 /* Populating extracted data into our views */
                 findViewById<TextView>(R.id.address).text = address
                 findViewById<TextView>(R.id.updated_at).text =  updatedAtText
@@ -136,6 +141,10 @@ class MainActivity : AppCompatActivity() {
                 findViewById<TextView>(R.id.wind).text = windSpeed
                 findViewById<TextView>(R.id.pressure).text = pressure
                 findViewById<TextView>(R.id.humidity).text = humidity
+                val imageView = findViewById<ImageView>(R.id.icon)
+                Glide.with(this@MainActivity)
+                    .load(imgsrc)
+                    .into(imageView)
 
                 findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
                 findViewById<RelativeLayout>(R.id.mainContainer).visibility = View.VISIBLE

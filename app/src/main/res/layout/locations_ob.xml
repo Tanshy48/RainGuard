@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6ABAEC"
+    android:background="@drawable/gradient1"
     tools:context=".LocationsOB">
 
     <LinearLayout
@@ -27,7 +27,6 @@
         android:layout_height="52dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="60dp"
-        android:background="#6AB9EB"
         android:baselineAligned="false"
         android:scrollbarFadeDuration="250"
         android:text="@string/Text1"
