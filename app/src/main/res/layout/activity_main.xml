@@ -14,59 +14,68 @@
         >
 
         <LinearLayout
-            android:id="@+id/topBar"
+            android:id="@+id/top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center|top"
-            android:layout_marginTop="10dp"
-            >
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/additionalPage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="40dp"
-                android:background="@drawable/baseline_menu_24"
-                android:onClick="toAdd" />
+            <LinearLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/additionalPage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/baseline_menu_24"
+                    android:onClick="toAdd" />
+                <Space
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/settings"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/baseline_settings_24"
+
+                    android:maxHeight="50dp"
+                    android:onClick="toSetting" />
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/addressContainer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_margin="50dp"
+                android:layout_margin="25dp"
                 android:gravity="center">
 
-            <TextView
+                <TextView
                     android:id="@+id/address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="24dp"
                     android:text="Uzhhorod, UA"/>
-            <TextView
-                android:id="@+id/updated_at"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"                    android:textAlignment="center"
-                android:textSize="14dp"
-                android:text="25 April 2023, 20:08 PM"/>
+                <TextView
+                    android:id="@+id/updated_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"                    android:textAlignment="center"
+                    android:textSize="14dp"
+                    android:text="25 April 2023, 20:08 PM"/>
             </LinearLayout>
-
-            <Button
-                android:id="@+id/settings"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginRight ="40dp"
-                android:background="@drawable/baseline_settings_24"
-                android:onClick="toSetting" />
-
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/overviewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/topBar"
+            android:layout_below="@+id/top"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:orientation="vertical">
@@ -87,14 +96,6 @@
                 android:layout_height="50dp"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/cloud" />
-
-            <TextView
-                android:id="@+id/status"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Clear Sky"
-                android:textSize="12sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
