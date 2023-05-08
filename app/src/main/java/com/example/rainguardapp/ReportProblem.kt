@@ -19,7 +19,7 @@ class ReportProblem : AppCompatActivity() {
         reportProblemButton = findViewById(R.id.readyButtonReportProblem)
         editText = findViewById(R.id.editTextTextMultiLine)
         reportProblemButton.setOnClickListener {
-            val recipient = "vasheimya@spamok.com"
+            val recipient = "reportsfromapp@gmail.com"
             val subject = "Report"
             val message = editText.text.toString()
 

@@ -42,11 +42,13 @@
                     android:id="@+id/date1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="02.05 12:00:00" />
 
                 <TextView
                     android:id="@+id/avgTemp1"
                     android:layout_width="124dp"
+                    android:textColor="@color/black"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="22.5C" />
@@ -60,6 +62,7 @@
                         android:id="@+id/temp_min_max1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="temp_min" />
 
                 </LinearLayout>
@@ -68,6 +71,7 @@
                     android:id="@+id/status1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Сонячно" />
             </LinearLayout>
         </LinearLayout>
@@ -98,11 +102,13 @@
                     android:id="@+id/date2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="02.05 12:00:00" />
                 <TextView
                     android:id="@+id/avgTemp2"
                     android:layout_width="124dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:text="22.5C" />
 
@@ -115,6 +121,7 @@
                         android:id="@+id/temp_min_max2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="temp_min" />
 
                 </LinearLayout>
@@ -123,6 +130,7 @@
                     android:id="@+id/status2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Сонячно" />
             </LinearLayout>
         </LinearLayout>
@@ -154,11 +162,13 @@
                     android:id="@+id/date3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="02.05 12:00:00" />
                 <TextView
                     android:id="@+id/avgTemp3"
                     android:layout_width="124dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:text="22.5C" />
 
@@ -171,6 +181,7 @@
                         android:id="@+id/temp_min_max3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="temp_min" />
 
                 </LinearLayout>
@@ -179,6 +190,7 @@
                     android:id="@+id/status3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Сонячно" />
             </LinearLayout>
         </LinearLayout>
@@ -209,11 +221,13 @@
                     android:id="@+id/date4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="02.05 12:00:00" />
                 <TextView
                     android:id="@+id/avgTemp4"
                     android:layout_width="124dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:text="22.5C" />
 
@@ -226,6 +240,7 @@
                         android:id="@+id/temp_min_max4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="temp_min" />
 
                 </LinearLayout>
@@ -234,6 +249,7 @@
                     android:id="@+id/status4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Сонячно" />
             </LinearLayout>
         </LinearLayout>
@@ -263,11 +279,13 @@
                     android:id="@+id/date5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="02.05 12:00:00" />
                 <TextView
                     android:id="@+id/avgTemp5"
                     android:layout_width="124dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:text="22.5C" />
 
@@ -280,6 +298,7 @@
                         android:id="@+id/temp_min_max5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/black"
                         android:text="temp_min" />
 
                 </LinearLayout>
@@ -288,6 +307,7 @@
                     android:id="@+id/status5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:text="Сонячно" />
             </LinearLayout>
         </LinearLayout>
@@ -304,6 +324,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:textColor="@color/black"
             android:text="Something went wrong"
             android:visibility="gone" />
     </LinearLayout>
