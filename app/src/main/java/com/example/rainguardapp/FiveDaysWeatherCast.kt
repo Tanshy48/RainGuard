@@ -15,6 +15,7 @@ import java.util.*
 class FiveDaysWeatherCast : AppCompatActivity() {
     lateinit var CITY: String
     lateinit var value: String
+    lateinit var lange: String
     val API: String = "d78a400532d5206b8ee146c6946a2706"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,15 +35,21 @@ class FiveDaysWeatherCast : AppCompatActivity() {
 
         override fun doInBackground(vararg params: String?): String? {
             var response: String?
+            var chose = "0"
             value = intent.getStringExtra("more").toString()
+            lange = intent.getStringExtra("lang").toString()
             try {
-                when (value){
-                    "0"-> response =
-                        URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&units=metric&appid=$API").readText(
+                if(value=="1" && lange == "0") chose = "1"
+                else if(value=="0" && lange == "1") chose = "2"
+                else chose = "2"
+                Log.i("test", chose)
+                when (chose){
+                    "1"-> response =
+                        URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&appid=$API").readText(
                             Charsets.UTF_8
                         )
-                    "1"->response =
-                        URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&appid=$API").readText(
+                    "2"->response =
+                        URL("https://api.openweathermap.org/data/2.5/forecast/daily?q=$CITY&cnt=5&units=metric&appid=$API&lang=uk").readText(
                             Charsets.UTF_8
                         )
                     else -> response =

@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var temp:String
     lateinit var tempMax:String
     lateinit var tempMin:String
+    lateinit var lange: String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, FiveDaysWeatherCast::class.java)
         intent.putExtra("Address", CITY)
         intent.putExtra("more", value)
+        intent.putExtra("lang", lange)
         startActivity(intent)
     }
     inner class weatherTask() : AsyncTask<String, Void, String>() {
@@ -70,7 +72,9 @@ class MainActivity : AppCompatActivity() {
             var response:String?
             try{
                 value = intent.getStringExtra("key").toString()
+                lange = intent.getStringExtra("lang").toString()
                 intent.putExtra("more", value)
+                intent.putExtra("lang", lange)
                 when (value){
                     "0" -> response = URL("https://api.openweathermap.org/data/2.5/weather?q=$CITY&units=metric&appid=$API").readText(
                         Charsets.UTF_8
@@ -93,6 +97,7 @@ class MainActivity : AppCompatActivity() {
 
             try {
                 value = intent.getStringExtra("key").toString()
+                lange = intent.getStringExtra("lang").toString()
                 /* Extracting JSON returns from the API */
                 val jsonObj = JSONObject(result)
                 val main = jsonObj.getJSONObject("main")
