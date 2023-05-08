@@ -10,6 +10,7 @@ import java.util.*
 
 class Setting : AppCompatActivity() {
     lateinit var CITY:String
+    lateinit var lange:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.setting)
@@ -42,16 +43,20 @@ class Setting : AppCompatActivity() {
     var chose = "0"
     fun F(view: View){
         chose="1"
+        lange = "0"
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("key", chose)
         intent.putExtra("Address", CITY)
+        intent.putExtra("lang", lange)
         startActivity(intent)
     }
     fun C(view: View){
         chose="0"
+        lange = "1"
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("key", chose)
         intent.putExtra("Address", CITY)
+        intent.putExtra("lang", lange)
         startActivity(intent)
     }
 

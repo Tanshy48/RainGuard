@@ -32,5 +32,9 @@
         <string name="humidity">Вологість</string>
         <string name="pressure">Тиск</string>
         <string name="ShowMore">Показати Більше</string>
+        <string name="TempMin5">Мінінімальна температура:</string>
+        <string name="TempMax5">Максимальна температура:</string>
+        <string name="Sunny">Сонячно</string>
+        <string name="Wrong">Щось пішло не так</string>
 
     </resources>
