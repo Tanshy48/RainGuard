@@ -35,7 +35,7 @@
                     android:background="@drawable/baseline_menu_24"
                     android:onClick="toAdd" />
                 <Space
-                    android:layout_width="280dp"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content" />
 
                 <Button
