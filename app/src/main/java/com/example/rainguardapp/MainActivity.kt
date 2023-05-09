@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         showMoreButton.setOnClickListener {
-            val intent = Intent(this, FourDaysWeatherCast::class.java)
+            val intent = Intent(this, FiveDaysWeatherCast::class.java)
             intent.putExtra("Address", CITY)
             startActivity(intent)
         }
@@ -165,7 +165,6 @@ class MainActivity : AppCompatActivity() {
                 /* Populating extracted data into our views */
                 findViewById<TextView>(R.id.address).text = address
                 findViewById<TextView>(R.id.updated_at).text =  updatedAtText
-                findViewById<TextView>(R.id.status).text = weatherDescription.capitalize()
                 findViewById<TextView>(R.id.temp).text = temp
                 findViewById<TextView>(R.id.temp_min1).text = tempMin
                 findViewById<TextView>(R.id.temp_max1).text = tempMax
