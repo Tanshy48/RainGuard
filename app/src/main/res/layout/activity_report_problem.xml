@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/reporting"
     tools:context=".ReportProblem">
 
     <LinearLayout
@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="25dp"
-        android:background="@drawable/reporting"
         >
 
 
@@ -21,8 +20,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textColor="@color/white"
             android:text="@string/reportText"
-            android:textSize="20sp" />
+            android:textSize="28dp" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine"
