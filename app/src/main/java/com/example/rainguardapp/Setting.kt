@@ -10,14 +10,16 @@ import java.util.*
 
 class Setting : AppCompatActivity() {
     lateinit var CITY:String
-    lateinit var lange:String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.setting)
         CITY= intent.getStringExtra("Address").toString()
     }
+    var chose = "0"
+    var lange = "0"
     fun LanguageENG(view: View) {
         val lang = "en"
+        lange = "0"
         val locale = Locale(lang)
         Locale.setDefault(locale)
         val config = Configuration()
@@ -26,10 +28,13 @@ class Setting : AppCompatActivity() {
         recreate()
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("Address", CITY)
+        intent.putExtra("key", chose)
+        intent.putExtra("lang", lange)
         startActivity(intent)
     }
     fun LanguageUKR(view: View) {
         val lang = "ukr"
+        lange = "1"
         val locale = Locale(lang)
         Locale.setDefault(locale)
         val config = Configuration()
@@ -38,12 +43,12 @@ class Setting : AppCompatActivity() {
         recreate()
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("Address", CITY)
+        intent.putExtra("key", chose)
+        intent.putExtra("lang", lange)
         startActivity(intent)
     }
-    var chose = "0"
     fun F(view: View){
         chose="1"
-        lange = "0"
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("key", chose)
         intent.putExtra("Address", CITY)
@@ -52,7 +57,6 @@ class Setting : AppCompatActivity() {
     }
     fun C(view: View){
         chose="0"
-        lange = "1"
         val intent = Intent(this, MainActivity::class.java)
         intent.putExtra("key", chose)
         intent.putExtra("Address", CITY)

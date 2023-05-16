@@ -239,9 +239,9 @@
                     <TextView
                         android:id="@+id/temp_min_max4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/black"
-                        android:text="temp_min" />
+                        android:layout_height="match_parent"
+                        android:text="temp_min"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
